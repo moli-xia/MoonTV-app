@@ -51,7 +51,7 @@
 
 1. **克隆项目**
    ```bash
-   git clone [https://github.com/moli-xia/MoonTV-app](https://github.com/moli-xia/MoonTV-app.git)
+   git clone https://github.com/moli-xia/MoonTV-app.git
    cd Moontv
    ```
 
@@ -101,7 +101,7 @@ npm install -g pm2
 
 1. **克隆并配置项目**
    ```bash
-   git clone [https://github.com/moli-xia/MoonTV-app](https://github.com/moli-xia/MoonTV-app.git)
+   git clone https://github.com/moli-xia/MoonTV-app.git
    cd Moontv
    
    # 安装依赖
