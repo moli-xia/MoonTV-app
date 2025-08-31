@@ -1,7 +1,6 @@
 # MoonTV-app - 影视资源聚合平台app版
 ## 更新：2.0版本已经包含2个app应用——手机版和电视TV版应用。请前往Releases页面下载！https://github.com/moli-xia/MoonTV-app/releases
-- 本项目来源:
-- https://github.com/LunaTechLab/MoonTV
+- 本项目来源: https://github.com/LunaTechLab/MoonTV https://github.com/orion-lib/OrionTV
 - 一个基于 Next.js 构建的现代化影视资源聚合平台，支持多种视频源，提供流畅的观影体验。
 - 本项目仅修改了页面样式，使页面顶部留出足够空间，避免了手机端与顶部手机状态栏重叠的问题。
 - 使用您的服务器搭建好本项目，使用AI编程工具，将项目地址设为http://你的服务器IP:3000 即可直接打包为安卓应用。
