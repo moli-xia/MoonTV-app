@@ -128,7 +128,7 @@ localstorage 模式支持管理页面与站点/用户/视频源配置（写入 `
 
 ### Docker 部署
 
-#### 1. 普通部署（localstorage，直接运行）
+#### 1. 普通部署（直接运行）
 
 ```bash
 # 拉取预构建镜像
@@ -183,101 +183,6 @@ docker rm -f moontv
 
 访问 `http://服务器 IP:3000` 即可。（需自行到服务器控制台放通 `3000` 端口）
 
-#### 2. Docker Hub 一键部署脚本（amd64）
-
-适用于 x86_64 服务器（常见云服务器）。
-
-```bash
-cat > deploy-moontv-amd64.sh <<'SH'
-#!/usr/bin/env bash
-set -euo pipefail
-
-APP_DIR="${APP_DIR:-/opt/moontv}"
-IMAGE="${IMAGE:-superneed/moontv-amd:latest}"
-CONTAINER_NAME="${CONTAINER_NAME:-moontv}"
-PORT="${PORT:-3000}"
-PASSWORD="${PASSWORD:-}"
-
-if [[ -z "${PASSWORD}" ]]; then
-  echo "请先设置 PASSWORD 环境变量，例如：PASSWORD=your_password bash deploy-moontv-amd64.sh"
-  exit 1
-fi
-
-mkdir -p "${APP_DIR}"
-cd "${APP_DIR}"
-
-docker pull "${IMAGE}"
-
-if [[ ! -f config.json ]]; then
-  docker run --rm "${IMAGE}" sh -c 'cat /app/config.json' > config.json
-fi
-
-chmod a+rw config.json || true
-
-docker rm -f "${CONTAINER_NAME}" >/dev/null 2>&1 || true
-
-docker run -d \
-  --name "${CONTAINER_NAME}" \
-  --restart unless-stopped \
-  -p "${PORT}:3000" \
-  -e PASSWORD="${PASSWORD}" \
-  -v "${APP_DIR}/config.json:/app/config.json" \
-  "${IMAGE}"
-
-echo "已启动：http://localhost:${PORT}"
-SH
-
-chmod +x deploy-moontv-amd64.sh
-PASSWORD=your_password ./deploy-moontv-amd64.sh
-```
-
-#### 3. Docker Hub 一键部署脚本（arm64）
-
-适用于 ARM64 服务器（例如部分 ARM 云主机、树莓派等）。
-
-```bash
-cat > deploy-moontv-arm64.sh <<'SH'
-#!/usr/bin/env bash
-set -euo pipefail
-
-APP_DIR="${APP_DIR:-/opt/moontv}"
-IMAGE="${IMAGE:-superneed/moontv-arm:latest}"
-CONTAINER_NAME="${CONTAINER_NAME:-moontv}"
-PORT="${PORT:-3000}"
-PASSWORD="${PASSWORD:-}"
-
-if [[ -z "${PASSWORD}" ]]; then
-  echo "请先设置 PASSWORD 环境变量，例如：PASSWORD=your_password bash deploy-moontv-arm64.sh"
-  exit 1
-fi
-
-mkdir -p "${APP_DIR}"
-cd "${APP_DIR}"
-
-docker pull "${IMAGE}"
-
-if [[ ! -f config.json ]]; then
-  docker run --rm --platform linux/arm64 "${IMAGE}" sh -c 'cat /app/config.json' > config.json
-fi
-
-chmod a+rw config.json || true
-
-docker rm -f "${CONTAINER_NAME}" >/dev/null 2>&1 || true
-
-docker run -d \
-  --name "${CONTAINER_NAME}" \
-  --restart unless-stopped \
-  -p "${PORT}:3000" \
-  -e PASSWORD="${PASSWORD}" \
-  -v "${APP_DIR}/config.json:/app/config.json" \
-  "${IMAGE}"
-
-echo "已启动：http://localhost:${PORT}"
-SH
-
-chmod +x deploy-moontv-arm64.sh
-PASSWORD=your_password ./deploy-moontv-arm64.sh
-```
 
 ## Docker Compose 最佳实践
 
