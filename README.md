@@ -30,7 +30,8 @@
 - 👿 **智能去广告**：自动跳过视频中的切片广告（实验性）
 
 
-  <summary>点击查看项目截图</summary>
+  <summary>项目截图</summary>
+  <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/phone.jpg" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot1.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot2.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot3.png" alt="项目截图" style="max-width:600px">
