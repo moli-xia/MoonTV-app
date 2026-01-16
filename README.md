@@ -1,7 +1,7 @@
 # MoonTV
 
 <div align="center">
-  <img src="public/logo.png" alt="LibreTV Logo" width="120">
+  <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/logo.png" alt="MoonTV Logo" width="120">
 </div>
 
 > 🎬 **MoonTV** 是一个开箱即用的、跨平台的影视聚合播放器。它基于 **Next.js 14** + **Tailwind&nbsp;CSS** + **TypeScript** 构建，支持多资源搜索、在线播放、收藏同步、播放记录、本地/云端存储，让你可以随时随地畅享海量免费影视内容。
@@ -31,9 +31,9 @@
 
 <details>
   <summary>点击查看项目截图</summary>
-  <img src="public/screenshot1.png" alt="项目截图" style="max-width:600px">
-  <img src="public/screenshot2.png" alt="项目截图" style="max-width:600px">
-  <img src="public/screenshot3.png" alt="项目截图" style="max-width:600px">
+  <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot1.png" alt="项目截图" style="max-width:600px">
+  <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot2.png" alt="项目截图" style="max-width:600px">
+  <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot3.png" alt="项目截图" style="max-width:600px">
 </details>
 
 ## 🗺 目录
@@ -121,7 +121,7 @@ localstorage 模式支持管理页面与站点/用户/视频源配置（写入 `
 
 0. 完成普通部署并成功访问
 1. 点击 **存储和数据库 -> D1 SQL 数据库**，创建一个新的数据库，名称随意
-2. 进入刚创建的数据库，点击左上角的 Explore Data，将[D1 初始化](D1初始化.md) 中的内容粘贴到 Query 窗口后点击 **Run All**，等待运行完成
+2. 进入刚创建的数据库，点击左上角的 Explore Data，将初始化 SQL 粘贴到 Query 窗口后点击 **Run All**，等待运行完成
 3. 返回你的 pages 项目，进入 **设置 -> 绑定**，添加绑定 D1 数据库，选择你刚创建的数据库，变量名称填 **DB**
 4. 设置环境变量 NEXT_PUBLIC_STORAGE_TYPE，值为 **d1**；设置 USERNAME 和 PASSWORD 作为站长账号
 5. 重试部署
