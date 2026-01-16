@@ -32,6 +32,7 @@
 
   <summary>项目截图</summary>
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/phone.jpg" alt="项目截图" style="max-width:400px">
+  <br>
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot1.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot2.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot3.png" alt="项目截图" style="max-width:600px">
