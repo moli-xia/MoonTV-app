@@ -1,0 +1,100 @@
+/* 全屏模式样式 */
+.fullscreen-mode {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  background: #000 !important;
+  overflow: hidden !important;
+}
+
+.fullscreen-mode * {
+  box-sizing: border-box;
+}
+
+/* 全屏按钮样式 */
+.fullscreen-button {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.fullscreen-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.fullscreen-button:active {
+  transform: scale(0.95);
+}
+
+/* 全屏模式下的视频播放器样式 */
+.fullscreen-mode .video-player,
+.fullscreen-mode .media-player {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: contain;
+}
+
+/* 全屏模式下的控制栏样式 */
+.fullscreen-mode .player-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* 横屏模式下的特殊样式 */
+@media screen and (orientation: landscape) {
+  .fullscreen-mode .video-player {
+    object-fit: cover;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .fullscreen-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 动画效果 */
+.fullscreen-mode {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 隐藏滚动条 */
+.fullscreen-mode::-webkit-scrollbar {
+  display: none;
+}
+
+.fullscreen-mode {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

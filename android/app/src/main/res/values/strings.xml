@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MoonTV</string>
+    <string name="title_activity_main">MoonTV</string>
+    <string name="package_name">com.moontv.app</string>
+    <string name="custom_url_scheme">com.moontv.app</string>
+</resources>
