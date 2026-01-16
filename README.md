@@ -29,12 +29,12 @@
 - 🚀 **极简部署**：一条 Docker 命令即可将完整服务跑起来，或免费部署到 Vercel 和 Cloudflare。
 - 👿 **智能去广告**：自动跳过视频中的切片广告（实验性）
 
-<details>
+
   <summary>点击查看项目截图</summary>
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot1.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot2.png" alt="项目截图" style="max-width:600px">
   <img src="https://raw.githubusercontent.com/moli-xia/MoonTV-app/main/public/screenshot3.png" alt="项目截图" style="max-width:600px">
-</details>
+
 
 ## 🗺 目录
 
